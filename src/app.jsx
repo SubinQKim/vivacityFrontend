@@ -7,7 +7,7 @@ const App = () => {
 
   const handleImageClick = async () => {
     try {
-      const response = await fetch('your-api-endpoint-url');
+      const response = await fetch('http://localhost:7001/user');
       const data = await response.json();
       setUserInfo(data); // Update state with fetched data
     } catch (error) {
