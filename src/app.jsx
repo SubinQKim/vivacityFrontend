@@ -7,7 +7,7 @@ const App = () => {
 
   const handleImageClick = async () => {
     try {
-      const response = await fetch('http://localhost:7001/user');
+      const response = await fetch('http://localhost:7001/fun/info');
       const data = await response.json();
       setUserInfo(data); // Update state with fetched data
     } catch (error) {
