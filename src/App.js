@@ -6,8 +6,9 @@ const App = () => {
   const [userInfo, setUserInfo] = useState(null);
 
   const handleImageClick = async () => {
+    console.log('Image clicked');
     try {
-      const response = await fetch('http://localhost:7001/fun/info');
+      const response = await fetch('http://localhost:7001/awesome/applicant');
       const data = await response.json();
       setUserInfo(data); // Update state with fetched data
     } catch (error) {
