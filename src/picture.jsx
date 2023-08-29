@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Picture = ({ onClick }) => {
-    const imagePath = require('./images/checkPick.jpeg');
+    const imagePath = require('./images/checkPic.jpeg');
 
     return (
         <img

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Picture from './Picture';
+import Picture from './picture';
 import UserInfo from './UserInfo';
 
 const App = () => {
