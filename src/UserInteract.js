@@ -5,6 +5,7 @@ import { addHobby, removeHobby } from './favoritesSlice';
 const UserInteract = () => {
   const favoriteHobbies = useSelector((state) => state.favoriteHobbies);
   const dispatch = useDispatch();
+  const [newHobby, setNewHobby] = useState(''); // Define and initialize newHobby state
 
   const handleAddHobby = (hobby) => {
     dispatch(addHobby(hobby));
@@ -36,4 +37,4 @@ const UserInteract = () => {
   );
 };
 
-export default UserInteractionComponent;
+export default UserInteract;
