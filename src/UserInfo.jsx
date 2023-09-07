@@ -1,6 +1,8 @@
 import React from 'react';
 
-const UserInfo = ({ data }) => {
+// pass the favorites prop:
+
+const UserInfo = ({ data, UserInteract }) => {
   return (
     <div>
       <p>Name: {data.name}</p>
@@ -8,7 +10,7 @@ const UserInfo = ({ data }) => {
       <p>Favorite: {data.favoriteCoffee}</p>
       {/* Display more information as needed */}
       <ul>
-        {favorites.map((hobby) => (
+        {UserInteract.map((hobby) => (
           <li key={hobby}>{hobby}</li>
         ))}
       </ul>

@@ -18,7 +18,7 @@ const App = () => {
   return (
     <div>
       <Picture onClick={handleImageClick} />
-      {userInfo && <UserInfo data={userInfo} />}
+      {userInfo && <UserInfo data={userInfo} favorites={favoriteHobbies}/>}
     </div>
   );
 };

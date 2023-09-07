@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setApiData } from './apiDataSlice';
 import Picture from './picture';
 import UserInfo from './UserInfo';
+import UserInteract from './UserInteract';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ const App = () => {
   return (
     <div>
       <Picture onClick={handleImageClick} />
-      {apiData && <UserInfo data={apiData} />}
+      {apiData && <UserInfo data={apiData} UserInteractionComponent = {favoriteHobbies}/>}
     </div>
   );
 };
