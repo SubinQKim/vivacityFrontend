@@ -2,7 +2,11 @@ import React from 'react';
 
 // pass the favorites prop:
 
-const UserInfo = ({ data, UserInteract }) => {
+const UserInfo = ({ data, favorites }) => {
+  if (!favorites) {
+    // Handle the case when favorites is undefined or null
+    return <p>No favorite hobbies available.</p>;
+  }
   return (
     <div>
       <p>Name: {data.name}</p>
@@ -10,7 +14,7 @@ const UserInfo = ({ data, UserInteract }) => {
       <p>Favorite: {data.favoriteCoffee}</p>
       {/* Display more information as needed */}
       <ul>
-        {UserInteract.map((hobby) => (
+        {favorites.map((hobby) => (
           <li key={hobby}>{hobby}</li>
         ))}
       </ul>

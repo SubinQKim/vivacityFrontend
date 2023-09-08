@@ -1,4 +1,4 @@
-//import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setApiData } from './apiDataSlice';
 import Picture from './picture';
@@ -10,6 +10,8 @@ const App = () => {
   const apiData = useSelector((state) => state.apiData);
 
   //const [userInfo, setUserInfo] = useState(null);
+  // Define favoriteHobbies using useState
+  const [favoriteHobbies, setFavoriteHobbies] = useState([]);
 
   const handleImageClick = async () => {
     console.log('Image clicked');
