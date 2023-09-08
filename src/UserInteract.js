@@ -7,8 +7,11 @@ const UserInteract = () => {
   const dispatch = useDispatch();
   const [newHobby, setNewHobby] = useState(''); // Define and initialize newHobby state
 
-  const handleAddHobby = (hobby) => {
-    dispatch(addHobby(hobby));
+  const handleAddHobby = () => {
+    if (newHobby.trim() !== '') {
+      dispatch(addHobby(newHobby));
+      setNewHobby(''); // Clear the input field after adding a hobby
+    }
   };
 
   const handleRemoveHobby = (hobby) => {
@@ -18,6 +21,13 @@ const UserInteract = () => {
   return (
     <div>
       <h2>Favorite Hobbies</h2>
+      <input 
+        type="text" 
+        placeholder="Enter a new hobby" 
+        value = {newHobby}
+        onChange={(e) => setNewHobby(e.target.value)} // Update newHobby when input changes
+      />
+      <button onClick={() => handleAddHobby(newHobby)}>Add Hobby</button>
       <ul>
         {favoriteHobbies.map((hobby) => (
           <li key={hobby}>
@@ -26,13 +36,6 @@ const UserInteract = () => {
           </li>
         ))}
       </ul>
-      <input 
-        type="text" 
-        placeholder="Enter a new hobby" 
-        value = {newHobby}
-        onChange={(e) => setNewHobby(e.target.value)} // Update newHobby when input changes
-      />
-      <button onClick={() => handleAddHobby(newHobby)}>Add Hobby</button>
     </div>
   );
 };
