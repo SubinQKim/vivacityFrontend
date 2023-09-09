@@ -25,10 +25,13 @@ const App = () => {
     }
   };
 
+  console.log('favoriteHobbies:', favoriteHobbies); // Log the value of favoriteHobbies
+
   return (
     <div>
       <Picture onClick={handleImageClick} />
       {apiData && <UserInfo data={apiData} favorites = {favoriteHobbies}/>}
+      <UserInteract /> {/* Include UserInteract component */}
     </div>
   );
 };

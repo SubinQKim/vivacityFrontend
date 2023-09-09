@@ -3,11 +3,6 @@ import React from 'react';
 // pass the favorites prop:
 
 const UserInfo = ({ data, favorites }) => {
-  if (!favorites) {
-    // Handle the case when favorites is undefined or null
-    console.log(favorites)
-    return <p>No favorite hobbies available.</p>;
-  }
   return (
     <div>
       <p>Name: {data.name}</p>
