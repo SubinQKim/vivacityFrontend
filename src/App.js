@@ -25,7 +25,7 @@ const App = () => {
     }
   };
 
-  console.log('favoriteHobbies:', favoriteHobbies); // Log the value of favoriteHobbies
+  // console.log('favoriteHobbies:', favoriteHobbies); // Log the value of favoriteHobbies
 
   return (
     <div>

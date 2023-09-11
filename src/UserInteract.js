@@ -18,6 +18,8 @@ const UserInteract = () => {
     dispatch(removeHobby(hobby));
   };
 
+  console.log('favoriteHobbies:', favoriteHobbies); // Log the value of favoriteHobbies
+
   return (
     <div>
       <h2>Favorite Hobbies</h2>
