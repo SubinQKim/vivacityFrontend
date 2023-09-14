@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addFavorite, removeFavorite } from './favoritesSlice';
+import { addFavorite, removeFavorite } from './slices/favoritesSlice';
 
 const Favorites = () => {
   // Implement the UI for managing and displaying favorite hobbies here

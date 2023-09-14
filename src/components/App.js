@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setApiData } from './apiDataSlice';
+import { setApiData } from '../slices/apiDataSlice';
 import Picture from './picture';
 import UserInfo from './UserInfo';
 import UserInteract from './UserInteract';

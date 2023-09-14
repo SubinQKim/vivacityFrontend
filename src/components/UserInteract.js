@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addHobby, removeHobby } from './favoritesSlice';
+import { addHobby, removeHobby } from '../slices/favoritesSlice';
 
 const UserInteract = () => {
   const [hobbies, setHobbies] = useState(['', '', '']);

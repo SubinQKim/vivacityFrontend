@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import apiDataReducer from './apiDataSlice';
-import favoriteSliceReducer from './favoritesSlice';
+import apiDataReducer from './slices/apiDataSlice';
+import favoriteSliceReducer from './slices/favoritesSlice';
 
 const store = configureStore({
   reducer: {
