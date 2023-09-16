@@ -5,7 +5,9 @@ const BookSearch = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState([]);
 
-  const apiKey = 'AIzaSyDubUbEanL6xHzBmNwVimdiLtjXMawwaZ8';
+  //require('dotenv').config(); // Load the dotenv library to access environment variables
+    
+  const apiKey = process.env.REACT_APP_GOOGLE_API_KEY; // Access the API key from the .env file
 
   const handleSearch = async () => {
     try {

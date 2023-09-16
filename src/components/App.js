@@ -4,6 +4,7 @@ import { setApiData } from '../slices/apiDataSlice';
 import Picture from './picture';
 import UserInfo from './UserInfo';
 import UserInteract from './UserInteract';
+import BookSearch from './BookSearch';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -32,6 +33,7 @@ const App = () => {
       <Picture onClick={handleImageClick} />
       {apiData && <UserInfo data={apiData} favorites = {favoriteHobbies}/>}
       <UserInteract /> {/* Include UserInteract component */}
+      <BookSearch /> {}
     </div>
   );
 };
