@@ -12,7 +12,7 @@ const BookSearch = () => {
   const handleSearch = async () => {
     try {
       const response = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}&key=${apiKey}`
+        `https://www.googleapis.com/books/v1/volumes?q=${searchQuery}$printType=books&key=${apiKey}`
       );
 
       setSearchResults(response.data.items || []);
