@@ -5,6 +5,7 @@ import Picture from './picture';
 import UserInfo from './UserInfo';
 import UserInteract from './UserInteract';
 import BookSearch from './BookSearch';
+import BookRecommendation from './BookRecommendation';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -34,6 +35,8 @@ const App = () => {
       {apiData && <UserInfo data={apiData} favorites = {favoriteHobbies}/>}
       <UserInteract /> {/* Include UserInteract component */}
       <BookSearch /> {}
+      <BookRecommendation /> {}
+      
     </div>
   );
 };
