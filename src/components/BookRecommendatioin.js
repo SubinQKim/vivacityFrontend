@@ -21,11 +21,13 @@ const BookRecommendations = () => {
 
   const preprocessPrompt = (userInput) => {
     // Implement text preprocessing as needed
-    return userInput;
+    const tokens = input.split(' ');
+    return tokens;
   };
 
   const loadRecommendationModel = async () => {
     // Load or create your TensorFlow recommendation model
+    const model = await tf.loadLayersModel()
     // Example: const model = await tf.loadLayersModel('model.json');
     return model;
   };
@@ -33,7 +35,13 @@ const BookRecommendations = () => {
   const getRecommendations = async (model, input) => {
     // Implement recommendation logic using TensorFlow
     // Example: const recommendations = await model.predict(input);
-    return recommendations;
+    //mock
+    const recommendedBooks = [
+        { title: 'Book 1', author: 'Author 1', description: 'Description 1' },
+        { title: 'Book 2', author: 'Author 2', description: 'Description 2' },
+        // Add more recommended books as needed
+      ];
+    return recommendedBooks;
   };
 
   return (
