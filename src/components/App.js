@@ -6,6 +6,7 @@ import UserInfo from './UserInfo';
 import UserInteract from './UserInteract';
 import BookSearch from './BookSearch';
 import BookRecommendation from './BookRecommendation';
+import TopBooksComponent from './TopBook';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -36,7 +37,7 @@ const App = () => {
       <UserInteract /> {/* Include UserInteract component */}
       <BookSearch /> {}
       <BookRecommendation /> {}
-      
+      <TopBooksComponent /> {}
     </div>
   );
 };
