@@ -9,7 +9,12 @@ function TopBooksComponent() {
     $.get('https://example.com/top-books', function (data) {
       const $html = $(data);
       // Extract and process data...
-      const scrapedData = /* process data here */;
+      const scrapedData = [];
+      $html.find('.book').each(function() {
+        const $book = $(this);
+        const title = $book.find('.book-title').text();
+        const author = $book.find('.book-author').text();
+      })
 
       // Update state with the scraped data
       setBookData(scrapedData);
