@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import * as tf from '@tensorflow/tfjs';
 
 const BookRecommendations = () => {
   const [prompt, setPrompt] = useState('');
   const [recommendations, setRecommendations] = useState([]);
+
+  useEffect(() => {
+    // Initialize TensorFlow when the component mounts
+    async function initializeTensorFlow() {
+      await tf.ready();
+    }
+    initializeTensorFlow();
+  }, []); // Empty dependency array to ensure it runs only once when the component mounts
 
   // Function to generate recommendations using TensorFlow.js
   const generateRecommendations = async () => {
@@ -21,7 +29,7 @@ const BookRecommendations = () => {
 
   const preprocessPrompt = (userInput) => {
     // Implement text preprocessing as needed
-    const tokens = input.split(' ');
+    const tokens = userInput.split(' ');
     return tokens;
   };
 
@@ -56,7 +64,9 @@ const BookRecommendations = () => {
       <ul>
         {recommendations.map((book, index) => (
           <li key={index}>
-            {/* Display book information here */}
+            <h3>{book.title}</h3>
+            <p>Author: {book.author}</p>
+            <p>Description: {book.description}</p>
           </li>
         ))}
       </ul>
