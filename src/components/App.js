@@ -37,7 +37,7 @@ const App = () => {
       <UserInteract /> {/* Include UserInteract component */}
       <BookSearch /> {}
       <BookRecommendation /> {}
-      <TopBooksComponent /> {}
+
     </div>
   );
 };

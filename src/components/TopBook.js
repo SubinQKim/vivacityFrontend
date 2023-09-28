@@ -14,6 +14,9 @@ function TopBooksComponent() {
         const $book = $(this);
         const title = $book.find('.book-title').text();
         const author = $book.find('.book-author').text();
+
+        // Push the extracted data into the array
+        scrapedData.push({ title, author });
       })
 
       // Update state with the scraped data
